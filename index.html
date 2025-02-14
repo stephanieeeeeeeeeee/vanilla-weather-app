@@ -3,18 +3,24 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&family=Pacifico&display=swap"
 			rel="stylesheet"
 		/>
-		<script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
 		<link rel="stylesheet" href="src/styles.css" />
-		<title>My weather application</title>
+		<title>Weather or Knot</title>
 	</head>
 	<body>
-		<div class="weather-app">
+		<div class="welcome" id="welcome">
+			<h1>
+				Welcome to <br />
+				Weather or Knot
+			</h1>
+		</div>
+		<div class="app" id="app">
 			<header>
 				<form class="search-form" id="search-form">
 					<input
@@ -28,35 +34,35 @@
 				</form>
 			</header>
 			<main>
-				<div class="current-weather">
+				<div class="weather-data">
 					<div>
-						<h1 class="current-city" id="current-city"></h1>
-						<p class="current-details">
-							<span id="current-date"></span>, moderate rain <br />
-							Humidity: <strong>87%</strong>, Wind: <strong>7.2km/h</strong>
+						<h1 class="city">New York</h1>
+						<p class="weather-details">
+							Thursday 13:01, clear skies<br />
+							Humidity: 66%, Wind: 1.69kn (3.13km/h)
 						</p>
 					</div>
-					<div class="current-temperature">
-						<span class="current-temperature-icon">☀️</span>
-						<span
-							class="current-temperature-value"
-							id="current-temperature"
-						></span>
-						<span class="current-temperature-unit">°F</span>
+					<div class="temperature-container">
+						<div class="icon">🌤️</div>
+						<div class="temperature-imperial">55</div>
+						<div class="temperature-unit-imperial">°F</div>
+						<!-- /
+						<div class="temperature-metric">13</div>
+						<div class="temperature-unit-metric">°C</div> -->
 					</div>
 				</div>
 			</main>
-			<footer>
+			<footer class="footer">
 				<p>
 					This project was coded by
-					<a href="#" target="_blank">Stephanie Stone</a> and is
+					<a href="#" target="_blank">Steph Stone</a>, is
 					<a
 						href="https://github.com/stephanieeeeeeeeeee/shecodes"
 						target="_blank"
 					>
 						on GitHub</a
 					>
-					and
+					&
 					<a href="#" target="_blank">hosted on Netlify</a>
 				</p>
 			</footer>
