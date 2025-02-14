@@ -9,6 +9,9 @@ a {
 }
 
 h1 {
+    	font-family: "Pacifico", serif;
+	font-weight: 400;
+	font-style: normal;
 }
 
 .welcome {
@@ -43,7 +46,7 @@ header {
 	font-variation-settings: "YOPQ" 300;
 }
 
-/* .temperature-container {
+.temperature-container {
 	display: flex;
 	justify-content: space-between;
 	font-family: "Kumbh Sans", serif;
@@ -51,7 +54,7 @@ header {
 	font-weight: 300;
 	font-style: normal;
 	font-variation-settings: "YOPQ" 300;
-} */
+}
 
 .search-input {
 	background-color: bisque;
@@ -80,7 +83,6 @@ main {
 }
 
 .details {
-    
 }
 
 footer {
