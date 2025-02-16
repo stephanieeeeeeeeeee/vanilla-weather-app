@@ -1,11 +1,8 @@
 body {
-	background-color: rgb(186, 129, 0);
+	background-color: #6b6e00;
 	font-family: "Pacifico", serif;
 	font-weight: 400;
 	font-style: normal;
-}
-a {
-	color: aquamarine;
 }
 
 h1 {
@@ -14,29 +11,25 @@ h1 {
 	font-style: normal;
 }
 
-/* .welcome {
-	background-color: rgb(113, 129, 105);
-	max-width: 300px;
-	margin: 0;
-	padding: 30px;
-	box-shadow: 0 30px 50px rgba(red, green, blue, alpha);
-	border-radius: 10px 50px 70px 70px;
-} */
-
 header {
-	border-bottom: 1px solid rgb(186, 129, 0);
 	padding: 30px 0;
 }
 
 .app {
 	background-color: rgb(113, 129, 105);
-	max-width: 600px;
+	max-width: 50%;
 	margin: 30px auto;
 	padding: 30px;
-	box-shadow: 0 30px 50px rgba(red, green, blue, alpha);
-	border-radius: 50px;
+	box-shadow: #cdeae726 0px 5px 15px 0px;
+	border-radius: 100px;
 }
-
+.city {
+	margin: 0;
+	font-size: 60px;
+	font-weight: 700;
+	line-height: 100px;
+	color: white;
+}
 .weather-data {
 	display: flex;
 	justify-content: space-between;
@@ -44,7 +37,9 @@ header {
 	font-optical-sizing: auto;
 	font-weight: 300;
 	font-style: normal;
+	font-size: 20px;
 	font-variation-settings: "YOPQ" 300;
+	flex-wrap: wrap;
 }
 
 .temperature-container {
@@ -54,43 +49,53 @@ header {
 	font-optical-sizing: auto;
 	font-weight: 300;
 	font-style: normal;
+	font-size: 50px;
 	font-variation-settings: "YOPQ" 300;
+	line-height: 100px;
 }
 
 .search-input {
-	background-color: bisque;
-	border: none;
-	border-radius: 10px;
-	width: 80%;
 	padding: 10px;
-	font-size: 16px;
+	font-size: 17px;
+	border: 1px solid grey;
+	float: left;
+	width: 80%;
+	background: #f1f1f1;
+	border-radius: 100px 0px 0px 100px;
 }
 
 .search-button {
-	border: none;
-	border-radius: 10px;
+	float: left;
+	width: 20%;
+	padding: 10px;
+	background: #2196f3;
+	color: white;
+	font-size: 17px;
+	border: 1px solid grey;
+	border-left: none; /* Prevent double borders */
+	cursor: pointer;
+	border-radius: 0px 100px 100px 0px;
+}
+
+.search-button button:hover {
+	background: #0b7dda;
 }
 
 main {
 	padding: 30px;
 }
 
-.city {
-	margin: 0;
-	font-size: 38px;
-	font-weight: 700;
-	line-height: 48px;
-	color: black;
-}
-
 footer {
 	font-family: "Kumbh Sans", serif;
 	font-optical-sizing: auto;
-	font-weight: 600;
+	font-weight: 300;
 	font-style: normal;
 	font-size: 15px;
 	font-variation-settings: "YOPQ" 300;
 	text-align: center;
-	border-top: 1px solid rgb(186, 129, 0);
-	padding: 10px 0 0 0;
+	border-top: 15px dashed rgba(255, 255, 255, 0.076);
+	padding: 8px 0 0 0;
+}
+a {
+	color: rgb(38, 56, 50);
 }
