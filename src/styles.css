@@ -9,19 +9,20 @@ a {
 }
 
 h1 {
-    	font-family: "Pacifico", serif;
+	font-family: "Pacifico", serif;
 	font-weight: 400;
 	font-style: normal;
 }
 
-.welcome {
+/* .welcome {
 	background-color: rgb(113, 129, 105);
 	max-width: 300px;
 	margin: 0;
 	padding: 30px;
 	box-shadow: 0 30px 50px rgba(red, green, blue, alpha);
 	border-radius: 10px 50px 70px 70px;
-}
+} */
+
 header {
 	border-bottom: 1px solid rgb(186, 129, 0);
 	padding: 30px 0;
@@ -80,9 +81,6 @@ main {
 	font-weight: 700;
 	line-height: 48px;
 	color: black;
-}
-
-.details {
 }
 
 footer {

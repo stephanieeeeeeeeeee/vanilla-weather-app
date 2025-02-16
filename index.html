@@ -3,7 +3,6 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
@@ -11,15 +10,13 @@
 			rel="stylesheet"
 		/>
 		<link rel="stylesheet" href="src/styles.css" />
+		<script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
 		<title>Weather or Knot</title>
 	</head>
 	<body>
-		<div class="welcome" id="welcome">
-			<h1>
-				Welcome to <br />
-				Weather or Knot
-			</h1>
-		</div>
+		<!-- <div class="welcome" id="welcome">
+			<h1>Welcome to Weather or Knot</h1>
+		</div> -->
 		<div class="app" id="app">
 			<header>
 				<form class="search-form" id="search-form">
@@ -36,34 +33,39 @@
 			<main>
 				<div class="weather-data">
 					<div>
-						<h1 class="city">New York</h1>
+						<h1 class="city" id="city"></h1>
 						<p class="weather-details">
-							Thursday 13:01, clear skies<br />
-							Humidity: 66%, Wind: 1.69kn (3.13km/h)
+							<span id="time"></span>
+							<span id="description"></span>
+							<br />
+							Humidity: <strong id="humidity"></strong>, Wind:
+							<strong id="wind-speed"></strong>
 						</p>
 					</div>
 					<div class="temperature-container">
-						<div class="icon">🌤️</div>
-						<div class="temperature-imperial">55</div>
-						<div class="temperature-unit-imperial">°F</div>
-						<!-- /
-						<div class="temperature-metric">13</div>
-						<div class="temperature-unit-metric">°C</div> -->
+						<div id="icon"></div>
+						<div class="temperature" id="temperature">5</div>
+						<div class="temperature-unit">°F</div>
 					</div>
 				</div>
 			</main>
+
 			<footer class="footer">
 				<p>
 					This project was coded by
-					<a href="#" target="_blank">Steph Stone</a>, is
+					<a href="https://github.com/stephanieeeeeeeeeee" target="_blank"
+						>Steph Stone</a
+					>, is
 					<a
 						href="https://github.com/stephanieeeeeeeeeee/shecodes"
 						target="_blank"
 					>
-						on GitHub</a
+						open-sourced on GitHub</a
 					>
 					&
-					<a href="#" target="_blank">hosted on Netlify</a>
+					<a href="https://weatherorknot.netlify.app/" target="_blank"
+						>hosted on Netlify</a
+					>
 				</p>
 			</footer>
 		</div>
