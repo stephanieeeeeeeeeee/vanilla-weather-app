@@ -146,14 +146,15 @@ main {
 footer {
 	font-family: "Kumbh Sans", serif;
 	font-optical-sizing: auto;
-	font-weight: 300;
+	font-weight: 400;
 	font-style: normal;
 	font-size: 15px;
 	font-variation-settings: "YOPQ" 300;
 	text-align: center;
 	border-top: 8px groove pink;
 	padding: 20px 0 0 0;
+	color: #4e5101;
 }
 a {
-	color: rgb(38, 56, 50);
+	color: #4e5101;
 }
