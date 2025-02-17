@@ -16,6 +16,8 @@ function updateWeather(response) {
 	humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
 	windSpeedElement.innerHTML = `${response.data.wind.speed}mp/h`;
 	iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="icon" />`;
+
+	getForecast(response.data.city);
 }
 
 function formatDate(date) {
@@ -52,26 +54,41 @@ function handleSearchSubmit(event) {
 	searchCity(searchInput.value);
 }
 
-function displayForecast() {
-	let days = ["Mon", "Tues", "Wed", "Thur", "Fri"];
+function formatDay(timestamp) {
+	let date = new Date(timestamp * 1000);
+	let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+	return days[date.getDay()];
+}
+
+function getForecast(city) {
+	let apiKey = "e691ce40ft32d16eb370fo057db0ea64";
+	let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=imperial`;
+	axios(apiUrl).then(displayForecast);
+}
+
+function displayForecast(response) {
 	let forecastHtml = "";
 
-	days.forEach(function (day) {
+	response.data.daily.forEach(function (day, index) {
 		forecastHtml =
 			forecastHtml +
 			`
 			<div class="day">
-				<div class="date">${day}</div>
-				<div class="forecast-icon"></div>
-				<div class="temperatures">
-					<div class="forecast-temperature">
-						<strong>100º</strong>
+				<div class="date">${formatDay(day.time)}</div>
+				<img src="${day.condition.icon_url}" class="icon"/>
+				<div class="forecast-temperatures">
+					<div class="forecast-temperature-max">
+						<strong>${Math.round(day.temperature.maximum)}º</strong>
 					</div>
-					<div class="forecast-temperature">90º</div>
+					<div class="forecast-temperature-min">${Math.round(
+						day.temperature.minimum
+					)}º</div>
 				</div>
 			</div>
 		`;
 	});
+
 	let forecastElement = document.querySelector("#forecast");
 	forecastElement.innerHTML = forecastHtml;
 }
@@ -80,4 +97,3 @@ let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 
 searchCity("New York");
-displayForecast();

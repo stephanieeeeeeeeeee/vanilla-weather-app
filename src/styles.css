@@ -5,10 +5,16 @@ body {
 	font-style: normal;
 }
 
-h1 {
+.city {
+	margin: 0;
+	font-size: 60px;
+	font-weight: 700;
+	line-height: 100px;
+	color: white;
 	font-family: "Pacifico", serif;
 	font-weight: 400;
 	font-style: normal;
+	padding-top: 5px;
 }
 
 header {
@@ -69,13 +75,7 @@ header {
 main {
 	padding: 30px;
 }
-.city {
-	margin: 0;
-	font-size: 60px;
-	font-weight: 700;
-	line-height: 100px;
-	color: white;
-}
+
 .weather-data {
 	display: flex;
 	justify-content: space-between;
@@ -88,6 +88,10 @@ main {
 	flex-wrap: wrap;
 }
 
+.weather-details {
+	color: white;
+}
+
 .temperature-container {
 	display: flex;
 	justify-content: space-between;
@@ -95,9 +99,11 @@ main {
 	font-optical-sizing: auto;
 	font-weight: 300;
 	font-style: normal;
-	font-size: 50px;
+	font-size: 60px;
 	font-variation-settings: "YOPQ" 300;
 	line-height: 100px;
+	color: white;
+	padding-top: 30px;
 }
 
 .forecast {
@@ -111,24 +117,30 @@ main {
 	color: white;
 	font-size: 16px;
 	line-height: 10px;
+	font-family: "Kumbh Sans", serif;
+	padding-bottom: 10px;
 }
 
 .forecast-icon {
 	font-size: 48px;
 	text-align: center;
-	margin-bottom: 10px;
+	margin: 10px 0 10px 0;
 }
 
-.temperatures {
+.forecast-temperatures {
 	display: flex;
 	text-align: center;
-	color: pink;
+	color: white;
 	margin-top: 10px;
 	justify-content: center;
+	font-family: "Kumbh Sans", serif;
 }
 
-.forecast-temperature {
-	padding: 0 10px;
+.forecast-temperature-max {
+	padding-right: 5px;
+}
+.forecast-temperature-min {
+	padding-left: 5px;
 }
 
 footer {
@@ -139,7 +151,7 @@ footer {
 	font-size: 15px;
 	font-variation-settings: "YOPQ" 300;
 	text-align: center;
-	border-top: 15px dashed rgba(255, 255, 255, 0.076);
+	border-top: 8px groove pink;
 	padding: 20px 0 0 0;
 }
 a {
