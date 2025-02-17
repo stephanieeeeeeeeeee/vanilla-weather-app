@@ -115,7 +115,7 @@ main {
 .date {
 	text-align: center;
 	color: white;
-	font-size: 16px;
+	font-size: 20px;
 	line-height: 10px;
 	font-family: "Kumbh Sans", serif;
 	padding-bottom: 10px;
@@ -157,4 +157,78 @@ footer {
 }
 a {
 	color: #4e5101;
+}
+
+@media (max-width: 768px) {
+	body {
+		padding: 10px;
+	}
+
+	.app {
+		max-width: 90%; /* Let app take more space on mobile */
+		padding: 20px;
+		border-radius: 50px;
+	}
+
+	.city {
+		font-size: 40px; /* Reduce size for mobile */
+		line-height: normal;
+		text-align: center;
+	}
+
+	.search-input {
+		width: 70%; /* Adjust input width */
+		font-size: 14px;
+	}
+
+	.search-button {
+		width: 30%; /* Adjust button width */
+		font-size: 14px;
+	}
+
+	.weather-data {
+		flex-direction: column; /* Stack weather data */
+		text-align: center;
+		gap: 15px;
+	}
+
+	.temperature-container {
+		flex-direction: column; /* Stack temperature elements */
+		align-items: center;
+		font-size: 40px;
+	}
+
+	.forecast {
+		flex-direction: column; /* Stack days vertically */
+		align-items: center; /* Center forecast items */
+		gap: 30px; /* Increase space between each day */
+	}
+
+	.forecast-icon {
+		font-size: 40px; /* Keep icons readable */
+	}
+
+	.date {
+		font-weight: 100px;
+		font-size: 20px; /* Ensure date remains legible */
+		margin-bottom: 10px; /* Add space below date */
+		margin-top: 10px;
+	}
+
+	.forecast-temperatures {
+		flex-direction: column; /* Stack temperatures */
+		align-items: center;
+		gap: 5px; /* Add space between min/max temps */
+	}
+
+	.forecast-temperature-max,
+	.forecast-temperature-min {
+		font-size: 14px;
+		padding: 5px 0; /* Increase spacing */
+	}
+}
+
+img {
+	max-width: 100%;
+	height: auto;
 }
