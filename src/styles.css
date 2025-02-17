@@ -193,7 +193,7 @@ a {
 	}
 
 	.temperature-container {
-		flex-direction: column; /* Stack temperature elements */
+		flex-direction: row; /* Stack temperature elements */
 		align-items: center;
 		font-size: 40px;
 	}
@@ -216,7 +216,77 @@ a {
 	}
 
 	.forecast-temperatures {
-		flex-direction: column; /* Stack temperatures */
+		flex-direction: row; /* row of temperatures */
+		align-items: center;
+		gap: 5px; /* Add space between min/max temps */
+	}
+
+	.forecast-temperature-max,
+	.forecast-temperature-min {
+		font-size: 14px;
+		padding: 5px 0; /* Increase spacing */
+	}
+}
+
+/* for most smartphones in landscape/horizontal orientation  */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+	body {
+		padding: 10px;
+	}
+
+	.app {
+		max-width: 90%; /* Let app take more space on mobile */
+		padding: 20px;
+		border-radius: 50px;
+	}
+
+	.city {
+		font-size: 40px; /* Reduce size for mobile */
+		line-height: normal;
+		text-align: center;
+	}
+
+	.search-input {
+		width: 70%; /* Adjust input width */
+		font-size: 14px;
+	}
+
+	.search-button {
+		width: 30%; /* Adjust button width */
+		font-size: 14px;
+	}
+
+	.weather-data {
+		flex-direction: row; /* show weather data */
+		text-align: center;
+		gap: 15px;
+	}
+
+	.temperature-container {
+		flex-direction: row; /* show temperature elements */
+		align-items: center;
+		font-size: 40px;
+	}
+
+	.forecast {
+		flex-direction: row; /* show days horizontally */
+		align-items: center; /* Center forecast items */
+		gap: 30px; /* Increase space between each day */
+	}
+
+	.forecast-icon {
+		font-size: 40px; /* Keep icons readable */
+	}
+
+	.date {
+		font-weight: 100px;
+		font-size: 20px; /* Ensure date remains legible */
+		margin-bottom: 10px; /* Add space below date */
+		margin-top: 10px;
+	}
+
+	.forecast-temperatures {
+		flex-direction: row; /* row of temperatures */
 		align-items: center;
 		gap: 5px; /* Add space between min/max temps */
 	}
