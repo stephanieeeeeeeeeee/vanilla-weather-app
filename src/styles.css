@@ -23,6 +23,52 @@ header {
 	box-shadow: #cdeae726 0px 5px 15px 0px;
 	border-radius: 100px;
 }
+.search-input {
+	padding: 10px;
+	font-size: 17px;
+	border: 1px solid grey;
+	float: left;
+	width: 80%;
+	background: #f1f1f1;
+	border-radius: 100px 0px 0px 100px;
+}
+
+.search-input::placeholder {
+	padding-left: 5px;
+	font-family: "Kumbh Sans", serif;
+	font-optical-sizing: auto;
+	font-weight: 300;
+	font-style: normal;
+	font-variation-settings: "YOPQ" 300;
+}
+
+.search-button {
+	float: right;
+	width: 20%;
+	padding: 10px;
+	background: #3088a6;
+	color: white;
+	font-size: 16px;
+	border: 1px solid grey;
+	border-left: none; /* Prevent double borders */
+	cursor: pointer;
+	border-radius: 0px 100px 100px 0px;
+	font-family: "Kumbh Sans", serif;
+	font-optical-sizing: auto;
+	font-weight: 300;
+	font-style: normal;
+	font-variation-settings: "YOPQ" 300;
+	transition-duration: 0.4s;
+}
+
+.search-button:hover {
+	background: #266e86;
+	color: white;
+}
+
+main {
+	padding: 30px;
+}
 .city {
 	margin: 0;
 	font-size: 60px;
@@ -54,35 +100,35 @@ header {
 	line-height: 100px;
 }
 
-.search-input {
-	padding: 10px;
-	font-size: 17px;
-	border: 1px solid grey;
-	float: left;
-	width: 80%;
-	background: #f1f1f1;
-	border-radius: 100px 0px 0px 100px;
+.forecast {
+	display: flex;
+	justify-content: space-around;
+	margin-top: 30px;
 }
 
-.search-button {
-	float: left;
-	width: 20%;
-	padding: 10px;
-	background: #2196f3;
+.date {
+	text-align: center;
 	color: white;
-	font-size: 17px;
-	border: 1px solid grey;
-	border-left: none; /* Prevent double borders */
-	cursor: pointer;
-	border-radius: 0px 100px 100px 0px;
+	font-size: 16px;
+	line-height: 10px;
 }
 
-.search-button button:hover {
-	background: #0b7dda;
+.forecast-icon {
+	font-size: 48px;
+	text-align: center;
+	margin-bottom: 10px;
 }
 
-main {
-	padding: 30px;
+.temperatures {
+	display: flex;
+	text-align: center;
+	color: pink;
+	margin-top: 10px;
+	justify-content: center;
+}
+
+.forecast-temperature {
+	padding: 0 10px;
 }
 
 footer {
@@ -94,7 +140,7 @@ footer {
 	font-variation-settings: "YOPQ" 300;
 	text-align: center;
 	border-top: 15px dashed rgba(255, 255, 255, 0.076);
-	padding: 8px 0 0 0;
+	padding: 20px 0 0 0;
 }
 a {
 	color: rgb(38, 56, 50);
